@@ -1,0 +1,145 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Curso {
+    private int id;
+    private String nombre;
+    private int creditos;
+
+    public Curso(int id, String nombre, int creditos) {
+        this.id = id;
+        this.nombre = nombre;
+        this.creditos = creditos;
+    }
+
+    // Getters y setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getCreditos() {
+        return creditos;
+    }
+
+    public void setCreditos(int creditos) {
+        this.creditos = creditos;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso [id=" + id + ", nombre=" + nombre + ", creditos=" + creditos + "]";
+    }
+}
+
+class Docente {
+    private int id;
+    private String nombres;
+    private String apellidos;
+    private String carrera;
+
+    public Docente(int id, String nombres, String apellidos, String carrera) {
+        this.id = id;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.carrera = carrera;
+    }
+
+    // Getters y setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    @Override
+    public String toString() {
+        return "Docente [id=" + id + ", nombres=" + nombres + ", apellidos=" + apellidos + ", carrera=" + carrera + "]";
+    }
+}
+
+class CursoDocente {
+    private int id;
+    private Curso curso;
+    private Docente docente;
+
+    public CursoDocente(int id, Curso curso, Docente docente) {
+        this.id = id;
+        this.curso = curso;
+        this.docente = docente;
+    }
+
+    // Getters y setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Docente getDocente() {
+        return docente;
+    }
+
+    public void setDocente(Docente docente) {
+        this.docente = docente;
+    }
+
+    @Override
+    public String toString() {
+        return "CursoDocente [id=" + id + ", curso=" + curso + ", docente=" + docente + "]";
+    }
+}
+
+class AsociacionMuchosAMuchos {
+    private List<Curso> cursos;
+    private List<Doc
